@@ -12,7 +12,7 @@ RSpec.describe ArtistsHelper, type: :helper do
   subject { helper }
 
   it { should respond_to(:display_artist).with(1).argument }
-  it { should respond_to(:artist_select).with(2).arguments }
+  it { should respond_to(:artist_select).with(1).arguments } #2 args is unnecessary, we can just use song.artist
 
   it "displays a link to edit the song if artist empty" do
     song = Song.create(title: "Bohemian Rhapsody")
